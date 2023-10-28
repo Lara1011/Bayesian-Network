@@ -1,3 +1,5 @@
+package src;
+
 import java.util.*;
 
 public class BasicInference {
@@ -111,7 +113,7 @@ public class BasicInference {
 
     /**
      * This method normalizes the probability so we could get the sum being 1.
-     * @param cpt: Given CPT.
+     * @param cpt: Given src.CPT.
      * @param req: Given query.
      * @return normalized probability.
      */

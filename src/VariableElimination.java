@@ -1,3 +1,5 @@
+package src;
+
 import java.util.*;
 
 public class VariableElimination {
@@ -68,7 +70,7 @@ public class VariableElimination {
     }
 
     /**
-     * If the CPT contains the given node, remove it.
+     * If the src.CPT contains the given node, remove it.
      * @param n: Given node.
      */
     private void remCPTs(MyNode n){
@@ -134,7 +136,7 @@ public class VariableElimination {
         List<MyNode> lst = new LinkedList<>();
         evidence_node.stream().iterator().forEachRemaining(n->lst.add(this.bayesianNetwork.BayesNet.get(n)));
         lst.add(query);
-        //Checking if CPT contains the answer to return it immediately without calculating it again.
+        //Checking if src.CPT contains the answer to return it immediately without calculating it again.
         for (CPT cpt:this.cpt) {
             if (cpt.nodes.equals(lst)) {
                 List<String> cor = new LinkedList<>(evidences);
@@ -184,7 +186,7 @@ public class VariableElimination {
     }
 
     /**
-     * This method applies join on 2 CPTs that contain a specific node, by creating a new CPT that contains the joined 2 CPTs and removing the old CPTs.
+     * This method applies join on 2 CPTs that contain a specific node, by creating a new src.CPT that contains the joined 2 CPTs and removing the old CPTs.
      * Increasing number of sums and multiplies according to the joins.
      * @param n: Given node.
      * @return list of CPTs after join.
@@ -239,10 +241,10 @@ public class VariableElimination {
     }
 
     /**
-     * This method eliminates a given node from CPTs by connecting rows. Removing the old CPT from the CPT list.
+     * This method eliminates a given node from CPTs by connecting rows. Removing the old src.CPT from the src.CPT list.
      * @param n: Given node.
-     * @param cpt_lst: List of CPT's.
-     * @return a CPT.
+     * @param cpt_lst: List of src.CPT's.
+     * @return a src.CPT.
      */
     private CPT eliminate(MyNode n, List<CPT> cpt_lst){
         CPT cpt = cpt_lst.get(0);
@@ -273,7 +275,7 @@ public class VariableElimination {
 
     /**
      * This method normalizes the probability so we could get the sum being 1.
-     * @param cpt: Given CPT.
+     * @param cpt: Given src.CPT.
      * @param req: Given query.
      * @return normalized probability.
      */

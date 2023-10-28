@@ -1,3 +1,5 @@
+package src;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -27,7 +29,7 @@ public class Ex1 {
             String line = br.readLine();
             //Reading xml file:
             try {
-                String FILENAME = "/Users/laraabu/Desktop/computer science/3rd year/AI algorithms/BayesianNetwork/" + line;
+                String FILENAME = "/Users/laraabu/Desktop/computer science/3rd year/AI algorithms/src.BayesianNetwork/" + line;
                 DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
                 dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
                 DocumentBuilder db = dbf.newDocumentBuilder();
@@ -87,7 +89,7 @@ public class Ex1 {
                 List<String> output_lst = new LinkedList<>();
                 for (String str : input) {
 //                    if (str.endsWith("1")) {
-//                        BasicInference basicInference = new BasicInference(bayesianNetwork, str.substring(0, str.length() - 2));
+//                        src.BasicInference basicInference = new src.BasicInference(bayesianNetwork, str.substring(0, str.length() - 2));
 //                        output_lst.add(basicInference.getAns());
 //                    }
                     if (str.endsWith("2")) {
